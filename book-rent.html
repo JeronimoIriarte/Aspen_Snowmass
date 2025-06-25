@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book & Rent | Aspen Snowmass</title>
+    <link rel="icon" type="image/png" href="./images/AspenLeaf.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/book-rent.css" />
+  </head>
+  <body>
+    <header id="navbar-container"></header>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <h1>Book Your Aspen Snowmass Experience</h1>
+          <p>
+            Find the perfect packages, lift tickets, and equipment rentals for
+            your mountain adventure
+          </p>
+        </div>
+      </section>
+
+      <section class="booking-options">
+        <div class="container">
+          <div class="tabs">
+            <button class="tab-btn active" data-tab="lift-tickets">
+              Lift Tickets
+            </button>
+            <button class="tab-btn" data-tab="rentals">
+              Equipment Rentals
+            </button>
+            <button class="tab-btn" data-tab="lessons">Lessons</button>
+            <button class="tab-btn" data-tab="packages">Packages</button>
+          </div>
+
+          <div class="tab-content">
+            <div class="tab-pane active" id="lift-tickets">
+              <h2>Lift Tickets</h2>
+              <div class="products-grid">
+                <div class="product-card" data-id="lift-1" data-price="149">
+                  <img
+                    src="https://images.pexels.com/photos/3228766/pexels-photo-3228766.jpeg"
+                    alt="1-Day Lift Ticket"
+                  />
+                  <div class="product-info">
+                    <h3>1-Day Lift Ticket</h3>
+                    <p>Access to all four mountains for one day</p>
+                    <p class="product-price">$149</p>
+                    <button class="btn btn-primary add-to-cart">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="product-card" data-id="lift-2" data-price="279">
+                  <img
+                    src="https://images.pexels.com/photos/1619307/pexels-photo-1619307.jpeg"
+                    alt="2-Day Lift Ticket"
+                  />
+                  <div class="product-info">
+                    <h3>2-Day Lift Ticket</h3>
+                    <p>Access to all four mountains for two consecutive days</p>
+                    <p class="product-price">$279</p>
+                    <button class="btn btn-primary add-to-cart">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="product-card" data-id="lift-3" data-price="399">
+                  <img
+                    src="https://images.pexels.com/photos/942559/pexels-photo-942559.jpeg"
+                    alt="3-Day Lift Ticket"
+                  />
+                  <div class="product-info">
+                    <h3>3-Day Lift Ticket</h3>
+                    <p>
+                      Access to all four mountains for three consecutive days
+                    </p>
+                    <p class="product-price">$399</p>
+                    <button class="btn btn-primary add-to-cart">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="product-card" data-id="lift-4" data-price="649">
+                  <img
+                    src="https://images.pexels.com/photos/7364/pexels-photo-7364.jpeg"
+                    alt="5-Day Lift Ticket"
+                  />
+                  <div class="product-info">
+                    <h3>5-Day Lift Ticket</h3>
+                    <p>
+                      Access to all four mountains for five consecutive days
+                    </p>
+                    <p class="product-price">$649</p>
+                    <button class="btn btn-primary add-to-cart">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="rentals">
+              <h2>Equipment Rentals</h2>
+              <div class="products-grid">
+                <div class="product-card" data-id="rental-1" data-price="59">
+                  <img
+                    src="https://images.pexels.com/photos/2071/snow-skiing-sport-ski.jpg"
+                    alt="Basic Ski Package"
+                  />
+                  <div class="product-info">
+                    <h3>Basic Ski Package</h3>
+                    <p>Skis, boots, and poles for one day</p>
+                    <p class="product-price">$59</p>
+                    <button class="btn btn-primary add-to-cart">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="product-card" data-id="rental-2" data-price="79">
+                  <img
+                    src="https://images.pexels.com/photos/376697/pexels-photo-376697.jpeg"
+                    alt="Performance Ski Package"
+                  />
+                  <div class="product-info">
+                    <h3>Performance Ski Package</h3>
+                    <p>High-performance skis, boots, and poles for one day</p>
+                    <p class="product-price">$79</p>
+                    <button class="btn btn-primary add-to-cart">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="product-card" data-id="rental-3" data-price="49">
+                  <img
+                    src="https://images.pexels.com/photos/209817/pexels-photo-209817.jpeg"
+                    alt="Snowboard Package"
+                  />
+                  <div class="product-info">
+                    <h3>Snowboard Package</h3>
+                    <p>Snowboard and boots for one day</p>
+                    <p class="product-price">$49</p>
+                    <button class="btn btn-primary add-to-cart">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="product-card" data-id="rental-4" data-price="25">
+                  <img
+                    src="https://images.pexels.com/photos/1271147/pexels-photo-1271147.jpeg"
+                    alt="Helmet Rental"
+                  />
+                  <div class="product-info">
+                    <h3>Helmet Rental</h3>
+                    <p>Safety helmet for one day</p>
+                    <p class="product-price">$25</p>
+                    <button class="btn btn-primary add-to-cart">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="lessons">
+              <h2>Ski & Snowboard Lessons</h2>
+              <div class="products-grid">
+                <div class="product-card" data-id="lesson-1" data-price="199">
+                  <img
+                    src="https://images.pexels.com/photos/6816830/pexels-photo-6816830.jpeg"
+                    alt="Private Ski Lesson"
+                  />
+                  <div class="product-info">
+                    <h3>Private Ski Lesson</h3>
+                    <p>One-on-one instruction for 2 hours</p>
+                    <p class="product-price">$199</p>
+                    <button class="btn btn-primary add-to-cart">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="product-card" data-id="lesson-2" data-price="99">
+                  <img
+                    src="https://images.pexels.com/photos/12852609/pexels-photo-12852609.jpeg"
+                    alt="Group Ski Lesson"
+                  />
+                  <div class="product-info">
+                    <h3>Group Ski Lesson</h3>
+                    <p>Small group instruction for 2 hours</p>
+                    <p class="product-price">$99</p>
+                    <button class="btn btn-primary add-to-cart">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="product-card" data-id="lesson-3" data-price="199">
+                  <img
+                    src="https://images.pexels.com/photos/2433363/pexels-photo-2433363.jpeg"
+                    alt="Private Snowboard Lesson"
+                  />
+                  <div class="product-info">
+                    <h3>Private Snowboard Lesson</h3>
+                    <p>One-on-one instruction for 2 hours</p>
+                    <p class="product-price">$199</p>
+                    <button class="btn btn-primary add-to-cart">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="product-card" data-id="lesson-4" data-price="99">
+                  <img
+                    src="https://images.pexels.com/photos/5867766/pexels-photo-5867766.jpeg"
+                    alt="Group Snowboard Lesson"
+                  />
+                  <div class="product-info">
+                    <h3>Group Snowboard Lesson</h3>
+                    <p>Small group instruction for 2 hours</p>
+                    <p class="product-price">$99</p>
+                    <button class="btn btn-primary add-to-cart">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="packages">
+              <h2>Vacation Packages</h2>
+              <div class="products-grid">
+                <div class="product-card" data-id="package-1" data-price="899">
+                  <img
+                    src="https://images.pexels.com/photos/3574342/pexels-photo-3574342.jpeg"
+                    alt="Weekend Getaway"
+                  />
+                  <div class="product-info">
+                    <h3>Weekend Getaway</h3>
+                    <p>
+                      2 nights lodging and 2-day lift tickets for two people
+                    </p>
+                    <p class="product-price">$899</p>
+                    <button class="btn btn-primary add-to-cart">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="product-card" data-id="package-2" data-price="1899">
+                  <img
+                    src="https://images.pexels.com/photos/7602068/pexels-photo-7602068.jpeg"
+                    alt="Family Adventure"
+                  />
+                  <div class="product-info">
+                    <h3>Family Adventure</h3>
+                    <p>
+                      4 nights lodging and 3-day lift tickets for a family of
+                      four
+                    </p>
+                    <p class="product-price">$1,899</p>
+                    <button class="btn btn-primary add-to-cart">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="product-card" data-id="package-3" data-price="1299">
+                  <img
+                    src="https://images.pexels.com/photos/5758741/pexels-photo-5758741.jpeg"
+                    alt="Learn to Ski Package"
+                  />
+                  <div class="product-info">
+                    <h3>Learn to Ski Package</h3>
+                    <p>
+                      3 nights lodging, 3-day lift tickets, and 3 days of
+                      lessons for one person
+                    </p>
+                    <p class="product-price">$1,299</p>
+                    <button class="btn btn-primary add-to-cart">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="product-card" data-id="package-4" data-price="2499">
+                  <img
+                    src="https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg"
+                    alt="Luxury Ski Week"
+                  />
+                  <div class="product-info">
+                    <h3>Luxury Ski Week</h3>
+                    <p>
+                      6 nights in luxury lodging and 5-day lift tickets for two
+                      people
+                    </p>
+                    <p class="product-price">$2,499</p>
+                    <button class="btn btn-primary add-to-cart">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+      <div class="cart-content">
+        <div class="cart-header">
+          <h2>Your Cart</h2>
+          <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+          <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-summary">
+          <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total">$0.00</span>
+          </div>
+          <button class="btn btn-primary checkout-btn" id="checkout-btn">
+            Proceed to Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkout-modal">
+      <div class="checkout-content">
+        <div class="checkout-header">
+          <h2>Checkout</h2>
+          <button class="close-checkout">&times;</button>
+        </div>
+        <div class="checkout-form">
+          <form id="payment-form">
+            <div class="form-section">
+              <h3>Contact Information</h3>
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" required />
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3>Payment Information</h3>
+              <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <input
+                  type="text"
+                  id="card-number"
+                  placeholder="XXXX XXXX XXXX XXXX"
+                  maxlength="19"
+                  required
+                />
+                <div class="error-message" id="card-number-error"></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="expiry">Expiration Date</label>
+                  <input
+                    type="text"
+                    id="expiry"
+                    placeholder="MM/YY"
+                    maxlength="5"
+                    required
+                  />
+                  <div class="error-message" id="expiry-error"></div>
+                </div>
+                <div class="form-group">
+                  <label for="cvv">CVV</label>
+                  <input
+                    type="text"
+                    id="cvv"
+                    placeholder="XXX"
+                    maxlength="3"
+                    required
+                  />
+                  <div class="error-message" id="cvv-error"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkout-summary">
+              <h3>Order Summary</h3>
+              <div id="checkout-items"></div>
+              <div class="checkout-total">
+                <span>Total:</span>
+                <span id="checkout-total">$0.00</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-payment">
+              Complete Purchase
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="confirmation-modal" id="confirmation-modal">
+      <div class="confirmation-content">
+        <div class="confirmation-header">
+          <h2>Order Confirmed!</h2>
+          <button class="close-confirmation">&times;</button>
+        </div>
+        <div class="confirmation-body">
+          <div class="confirmation-icon">✓</div>
+          <p>Thank you for your purchase. Your order has been confirmed!</p>
+          <p>
+            A confirmation email has been sent to
+            <span id="confirmation-email"></span>
+          </p>
+          <p>Order #: <span id="order-number"></span></p>
+          <button class="btn btn-primary" id="continue-shopping">
+            Continue Shopping
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer-container"></footer>
+
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/cart.js"></script>
+    <script type="module" src="./js/payment.js"></script>
+  </body>
+</html>

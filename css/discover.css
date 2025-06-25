@@ -1,0 +1,319 @@
+/* Page Header */
+.page-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/849704/pexels-photo-849704.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: var(--light-color);
+  padding: 8rem 0 4rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  color: var(--light-color);
+  margin-bottom: var(--spacing-md);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+/* About Section */
+.about-section {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--light-color);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.about-content h2 {
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+}
+
+.about-content h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.about-content p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.7;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Mission Section */
+.mission-section {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--secondary-color);
+}
+
+.mission-content h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.mission-content > p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.value-card {
+  background-color: var(--light-color);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.value-card h3 {
+  margin-bottom: var(--spacing-md);
+  color: var(--primary-dark);
+}
+
+.value-card p {
+  color: var(--gray-600);
+}
+
+/* Sustainability Section */
+.sustainability-section {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--light-color);
+}
+
+.sustainability-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.sustainability-card {
+  background-color: var(--gray-100);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.sustainability-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.sustainability-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.sustainability-content {
+  padding: var(--spacing-lg);
+}
+
+.sustainability-content h3 {
+  margin-bottom: var(--spacing-md);
+  color: var(--primary-dark);
+}
+
+.sustainability-content p {
+  color: var(--gray-600);
+}
+
+/* Team Section */
+.team-section {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--gray-100);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.team-card {
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.team-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.team-card h3 {
+  margin: var(--spacing-md) 0 var(--spacing-xs);
+  color: var(--primary-dark);
+}
+
+.team-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+.team-card p {
+  padding: 0 var(--spacing-md) var(--spacing-md);
+  color: var(--gray-600);
+}
+
+/* Awards Section */
+.awards-section {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--light-color);
+}
+
+.awards-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.award {
+  display: flex;
+  margin-bottom: var(--spacing-lg);
+  background-color: var(--gray-100);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.award:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.award-year {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: var(--spacing-lg);
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+}
+
+.award-content {
+  padding: var(--spacing-lg);
+  flex: 1;
+}
+
+.award-content h3 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.award-content p {
+  color: var(--gray-600);
+  font-style: italic;
+}
+
+/* CTA Section */
+.cta-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/1271171/pexels-photo-1271171.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: var(--light-color);
+  padding: var(--spacing-xxl) 0;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  color: var(--light-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+.cta-content p {
+  margin-bottom: var(--spacing-xl);
+  font-size: 1.2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .values-grid,
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-grid,
+  .sustainability-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-image {
+    order: -1;
+  }
+  
+  .award {
+    flex-direction: column;
+  }
+  
+  .award-year {
+    min-width: auto;
+    padding: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 576px) {
+  .values-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}

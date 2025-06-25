@@ -1,0 +1,283 @@
+/* Page Header */
+.page-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://www.aspensnowmass.com/-/media/aspen-snowmass/images/featured-content-row/winter/2024-25/aspen-highlands-highland-bowl-featured-content-row-20240717.jpg?mw=1600&mh=650&hash=747966FC81830E3ED0B02A1291E6B0B4");
+  background-size: cover;
+  background-position: center;
+  color: var(--light-color);
+  padding: 8rem 0 4rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  color: var(--light-color);
+  margin-bottom: var(--spacing-md);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+/* Mountains Overview */
+.mountains-overview {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--light-color);
+}
+
+.overview-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.overview-content h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.overview-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.mountains-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.stat-card {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.stat-label {
+  font-size: 1.1rem;
+}
+
+/* Mountain Details */
+.mountain-details {
+  padding: var(--spacing-xxl) 0;
+}
+
+.mountain-details:nth-of-type(odd) {
+  background-color: var(--gray-100);
+}
+
+.mountain-details:nth-of-type(even) {
+  background-color: var(--light-color);
+}
+
+.mountain-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.mountain-grid.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.mountain-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+}
+
+.mountain-content h2 {
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+}
+
+.mountain-content h2:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.mountain-content p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.7;
+}
+
+.mountain-quick-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  background-color: var(--secondary-color);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+}
+
+.quick-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+}
+
+.stat-value {
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+/* Trail Breakdown */
+.trail-breakdown {
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.trail-breakdown h3 {
+  margin-bottom: var(--spacing-md);
+}
+
+.trail-bars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.trail-type {
+  display: grid;
+  grid-template-columns: 100px 1fr 50px;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.trail-label {
+  font-weight: 600;
+}
+
+.trail-bar {
+  height: 20px;
+  background-color: var(--gray-300);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.trail-fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.trail-fill.green {
+  background-color: #4caf50;
+}
+
+.trail-fill.blue {
+  background-color: #2196f3;
+}
+
+.trail-fill.black {
+  background-color: #212121;
+}
+
+.trail-percent {
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Trail Map Section */
+.trail-map-section {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--secondary-color);
+}
+
+.section-description {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--spacing-xl);
+  font-size: 1.1rem;
+}
+
+.trail-map-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.trail-map-card {
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  text-align: center;
+  padding-bottom: var(--spacing-lg);
+  transition: var(--transition);
+}
+
+.trail-map-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.trail-map-thumb {
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: var(--spacing-md);
+}
+
+.trail-map-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trail-map-card h3 {
+  margin-bottom: var(--spacing-md);
+}
+
+/* CTA Section */
+.cta-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://www.aspensnowmass.com/-/media/aspen-snowmass/images/generic-banner/winter/2021-22/snow-report-raw-data-generic-banner-09202021.jpg?h=488&w=1600&hash=9A5F4B7AF22A86E4631A26B1CFB35E86");
+  background-size: cover;
+  background-position: center;
+  color: var(--light-color);
+  padding: var(--spacing-xxl) 0;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  color: var(--light-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+.cta-content p {
+  margin-bottom: var(--spacing-xl);
+  font-size: 1.2rem;
+}

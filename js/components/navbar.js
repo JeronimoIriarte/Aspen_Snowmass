@@ -18,16 +18,16 @@ const createNavbar = () => {
         <div class="navbar-links">
           <a href="./index.html" class="${
             currentPage === "index.html" ? "active" : ""
-          }">Inicio</a>
+          }">Home</a>
           <a href="./mountains.html" class="${
             currentPage === "mountains.html" ? "active" : ""
-          }">Montañas</a>
+          }">Mountains</a>
           <a href="./book-rent.html" class="${
             currentPage === "book-rent.html" ? "active" : ""
-          }">Reservar y Alquilar</a>
+          }">Book & Rent</a>
           <a href="./discover.html" class="${
             currentPage === "discover.html" ? "active" : ""
-          }">Descubrir</a>
+          }">About Us</a>
           <a href="./book-rent.html" class="cart-icon">
             🛒 <span class="cart-count" style="display: none;">0</span>
           </a>

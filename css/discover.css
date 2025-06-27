@@ -1,6 +1,7 @@
 /* Page Header */
 .page-header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/849704/pexels-photo-849704.jpeg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://www.aspensnowmass.com/-/media/aspen-snowmass/images/hero/hero-image/winter/2023-24/sss-specialty-camps-hero-20230824.webp?mw=1506&mh=930&hash=B2D11BD9565E205D525B41B2F5266F66");
   background-size: cover;
   background-position: center;
   color: var(--light-color);
@@ -39,7 +40,7 @@
 }
 
 .about-content h2:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 0;
@@ -260,7 +261,8 @@
 
 /* CTA Section */
 .cta-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/1271171/pexels-photo-1271171.jpeg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://www.aspensnowmass.com/-/media/aspen-snowmass/images/hero/hero-image/winter/2021-22/snowshoe-tours-hero-20211019.jpg?mw=1506&mh=930&hash=48B5B8742439581BC49E93BBF9E6E4D1");
   background-size: cover;
   background-position: center;
   color: var(--light-color);
@@ -296,15 +298,15 @@
   .sustainability-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .about-image {
     order: -1;
   }
-  
+
   .award {
     flex-direction: column;
   }
-  
+
   .award-year {
     min-width: auto;
     padding: var(--spacing-sm);

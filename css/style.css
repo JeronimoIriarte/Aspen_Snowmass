@@ -1,11 +1,11 @@
 /* Base Styles */
 :root {
   /* Color palette */
-  --primary-color: #0f4c81; /* Deep blue */
+  --primary-color: #0f4c81;
   --primary-light: #3a6ea5;
   --primary-dark: #062c4e;
-  --secondary-color: #e8f1f8; /* Light blue/white */
-  --accent-color: #c94634; /* Warm red accent */
+  --secondary-color: #e8f1f8;
+  --accent-color: #c94634;
   --accent-light: #e8655a;
   --accent-dark: #9e3122;
   --light-color: #ffffff;
@@ -19,12 +19,12 @@
   --gray-700: #495057;
   --gray-800: #343a40;
   --gray-900: #212529;
-  
+
   /* Typography */
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --heading-line-height: 1.2;
   --body-line-height: 1.5;
-  
+
   /* Spacing */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
@@ -32,17 +32,17 @@
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
   --spacing-xxl: 3rem;
-  
+
   /* Border Radius */
   --border-radius-sm: 0.25rem;
   --border-radius: 0.5rem;
   --border-radius-lg: 1rem;
-  
+
   /* Shadows */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-  
+
   /* Transitions */
   --transition: all 0.3s ease;
 }
@@ -73,7 +73,12 @@ main {
   flex: 1;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: var(--heading-line-height);
   margin-bottom: var(--spacing-md);
   color: var(--dark-color);
@@ -129,7 +134,7 @@ section {
 }
 
 .section-title:after {
-  content: '';
+  content: "";
   display: block;
   width: 60px;
   height: 3px;
@@ -228,7 +233,7 @@ section {
 }
 
 .navbar-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -297,7 +302,7 @@ section {
 }
 
 .footer-section h3:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -8px;
   left: 0;
@@ -346,53 +351,4 @@ section {
   text-align: center;
   font-size: 0.9rem;
   color: var(--gray-500);
-}
-
-/* Responsive Styles */
-@media (max-width: 992px) {
-  .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: var(--dark-color);
-    flex-direction: column;
-    padding: var(--spacing-lg);
-    gap: var(--spacing-md);
-    box-shadow: var(--shadow);
-  }
-  
-  .navbar-links.active {
-    display: flex;
-  }
-  
-  .mobile-menu-btn {
-    display: block;
-  }
-
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
-  }
-}
-
-@media (max-width: 576px) {
-  html {
-    font-size: 14px;
-  }
-  
-  .container {
-    padding: 0 var(--spacing-md);
-  }
-  
-  section {
-    padding: var(--spacing-xl) 0;
-  }
 }

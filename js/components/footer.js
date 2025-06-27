@@ -1,22 +1,35 @@
-// Create and insert footer into the page
+// ARCHIVO: footer.js - Componente de pie de página reutilizable
+// Este archivo crea dinámicamente el footer en todas las páginas
+// Funcionalidades:
+// - Creación dinámica del HTML del footer
+// - Año automático en el copyright
+// - Enlaces organizados por categorías
+// - Información de contacto y redes sociales
+
+// FUNCIÓN PRINCIPAL: Crear y insertar footer
 const createFooter = () => {
+  // Busca el contenedor donde se insertará el footer
   const footerContainer = document.getElementById("footer-container");
 
+  // Si no existe el contenedor, termina la ejecución
   if (!footerContainer) return;
 
-  // obtiene el año actual para el copyright
+  // OBTENCIÓN DEL AÑO ACTUAL
+  // Genera automáticamente el año para el copyright
   const currentYear = new Date().getFullYear();
 
-  // Crea el HTML del footer
+  // TEMPLATE HTML DEL FOOTER
   const footerHTML = `
     <div class="footer">
       <div class="container">
         <div class="footer-container">
+      
           <div class="footer-section">
             <div class="footer-logo">
               <img src="/images/AspenSkiingCompany.png" alt="Aspen Snowmass Logo">
             </div>
             <p>Experience the magic of Aspen Snowmass, Colorado's premier ski resort destination with four incredible mountains.</p>
+            
             <div class="social-links">
               <a href="#" aria-label="Facebook">📱</a>
               <a href="#" aria-label="Twitter">📱</a>
@@ -59,16 +72,16 @@ const createFooter = () => {
         </div>
         
         <div class="footer-bottom">
-          <p>&copy; ${currentYear} Aspen Snowmass. All rights reserved. Esta es una pagina web demo para propositos educacionales.</p>
+          <p>&copy; ${currentYear} Aspen Snowmass. All rights reserved. Esta es una pagina web beta para propositos educacionales.</p>
           <p>Desarrollado por Jeronimo Iriarte - Reference: <a href="https://www.aspensnowmass.com" target="_blank">aspensnowmass.com</a></p>
         </div>
       </div>
     </div>
   `;
 
-  // Insertar footer
+  // Inyecta el footer en el contenedor
   footerContainer.innerHTML = footerHTML;
 };
 
-// llamar a la funcion cuando carga el script
+// Llama a la función inmediatamente cuando se carga el script
 createFooter();

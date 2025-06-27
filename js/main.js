@@ -1,37 +1,34 @@
-import './components/navbar.js';
-import './components/footer.js';
+// ARCHIVO: main.js - Funcionalidad principal y común a todas las páginas
+// Este archivo se encarga de:
+// - Importar componentes comunes (navbar y footer)
+// - Manejar efectos de scroll en la navegación
+// - Gestionar el menú móvil
 
-// Initialize common functionality
-document.addEventListener('DOMContentLoaded', () => {
-  // Handle navbar scroll effect
-  const navbar = document.querySelector('.navbar');
-  
+// IMPORTACIÓN DE COMPONENTES
+// Importa los archivos que crean la navegación y el pie de página
+// Estos se ejecutan automáticamente al importarse
+import "./components/navbar.js";
+import "./components/footer.js";
+
+// INICIALIZACIÓN DE FUNCIONALIDADES COMUNES
+// Se ejecuta cuando el DOM está completamente cargado
+document.addEventListener("DOMContentLoaded", () => {
+  // EFECTO DE SCROLL EN LA NAVEGACIÓN
+  // Cambia la apariencia del navbar cuando el usuario hace scroll
+  const navbar = document.querySelector(".navbar");
+
+  // Función que maneja el cambio de estilo del navbar
   const handleScroll = () => {
+    // Si el usuario ha hecho scroll más de 50px desde el top
     if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
+      // Agrega la clase 'scrolled' que hace el navbar más opaco
+      navbar.classList.add("scrolled");
     } else {
-      navbar.classList.remove('scrolled');
+      // Remueve la clase cuando está en el top de la página
+      navbar.classList.remove("scrolled");
     }
   };
-  
-  window.addEventListener('scroll', handleScroll);
-  
-  // Handle mobile menu toggle
-  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-  const navbarLinks = document.querySelector('.navbar-links');
-  
-  if (mobileMenuBtn && navbarLinks) {
-    mobileMenuBtn.addEventListener('click', () => {
-      navbarLinks.classList.toggle('active');
-    });
-  }
-  
-  // Close mobile menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (navbarLinks && navbarLinks.classList.contains('active')) {
-      if (!e.target.closest('.navbar-links') && !e.target.closest('.mobile-menu-btn')) {
-        navbarLinks.classList.remove('active');
-      }
-    }
-  });
+
+  // Escucha el evento de scroll en la ventana
+  window.addEventListener("scroll", handleScroll);
 });

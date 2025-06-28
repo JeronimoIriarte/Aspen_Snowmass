@@ -66,13 +66,28 @@ document.addEventListener("DOMContentLoaded", () => {
       // Guarda el carrito actualizado en localStorage
       saveCart();
 
-      // Actualiza el contador del carrito
+      // Actualiza el contador del carrito con animación
       updateCartCount();
+      
+      // Muestra animación de feedback visual
+      showCartAddedFeedback();
 
-      // Muestra el modal del carrito automáticamente
-      showCartModal();
+      // NO abre el modal automáticamente - removido showCartModal()
     });
   });
+
+  // Función para mostrar feedback visual cuando se agrega un item
+  function showCartAddedFeedback() {
+    if (cartCountElement) {
+      // Agrega clase de animación
+      cartCountElement.classList.add("cart-bounce");
+      
+      // Remueve la clase después de la animación
+      setTimeout(() => {
+        cartCountElement.classList.remove("cart-bounce");
+      }, 600);
+    }
+  }
 
   // Calcula el total de items y actualiza el badge del ícono del carrito
   function updateCartCount() {

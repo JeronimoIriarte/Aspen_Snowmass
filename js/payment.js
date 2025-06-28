@@ -156,15 +156,16 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault(); // Previene el envío normal del formulario
 
       // Limpia mensajes de error previos
-      cardNumberError.textContent = "";
-      expiryError.textContent = "";
-      cvvError.textContent = "";
+      if (cardNumberError) cardNumberError.textContent = "";
+      if (expiryError) expiryError.textContent = "";
+      if (cvvError) cvvError.textContent = "";
 
       // Obtiene los valores del formulario
-      const cardNumber = cardNumberInput.value;
-      const expiry = expiryInput.value;
-      const cvv = cvvInput.value;
-      const email = document.getElementById("email").value;
+      const cardNumber = cardNumberInput ? cardNumberInput.value : "";
+      const expiry = expiryInput ? expiryInput.value : "";
+      const cvv = cvvInput ? cvvInput.value : "";
+      const emailInput = document.getElementById("email");
+      const email = emailInput ? emailInput.value : "";
 
       // Ejecuta todas las validaciones
       const cardNumberValidation = validateCardNumber(cardNumber);
@@ -172,15 +173,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const cvvValidation = validateCVV(cvv);
 
       // Muestra errores de validación si los hay
-      if (!cardNumberValidation.valid) {
+      if (!cardNumberValidation.valid && cardNumberError) {
         cardNumberError.textContent = cardNumberValidation.message;
       }
 
-      if (!expiryValidation.valid) {
+      if (!expiryValidation.valid && expiryError) {
         expiryError.textContent = expiryValidation.message;
       }
 
-      if (!cvvValidation.valid) {
+      if (!cvvValidation.valid && cvvError) {
         cvvError.textContent = cvvValidation.message;
       }
 
@@ -202,23 +203,33 @@ document.addEventListener("DOMContentLoaded", () => {
             .padStart(6, "0");
 
         // Muestra la confirmación con los datos del pedido
-        document.getElementById("confirmation-email").textContent = email;
-        document.getElementById("order-number").textContent = orderNumber;
+        const confirmationEmail = document.getElementById("confirmation-email");
+        const orderNumberElement = document.getElementById("order-number");
+        
+        if (confirmationEmail) confirmationEmail.textContent = email;
+        if (orderNumberElement) orderNumberElement.textContent = orderNumber;
 
         // Oculta el modal de checkout
-        document.getElementById("checkout-modal").classList.remove("active");
+        const checkoutModal = document.getElementById("checkout-modal");
+        if (checkoutModal) {
+          checkoutModal.classList.remove("active");
+        }
 
         // Muestra el modal de confirmación
-        document.getElementById("confirmation-modal").classList.add("active");
+        const confirmationModal = document.getElementById("confirmation-modal");
+        if (confirmationModal) {
+          confirmationModal.classList.add("active");
+        }
 
         // LIMPIA EL CARRITO DESPUÉS DEL PAGO EXITOSO
-        localStorage.removeItem("aspenCart");
+        // Llama a la función del carrito para limpiar todo
+        if (typeof window.handlePaymentSuccess === 'function') {
+          window.handlePaymentSuccess();
+        }
 
-        // Actualiza el contador del carrito a 0
-        const cartCountElement = document.querySelector(".cart-count");
-        if (cartCountElement) {
-          cartCountElement.textContent = "0";
-          cartCountElement.style.display = "none";
+        // Limpia el formulario de pago
+        if (paymentForm) {
+          paymentForm.reset();
         }
       }
     });
@@ -229,7 +240,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeConfirmationBtn = document.querySelector(".close-confirmation");
   if (closeConfirmationBtn) {
     closeConfirmationBtn.addEventListener("click", () => {
-      document.getElementById("confirmation-modal").classList.remove("active");
+      const confirmationModal = document.getElementById("confirmation-modal");
+      if (confirmationModal) {
+        confirmationModal.classList.remove("active");
+      }
       document.body.style.overflow = ""; // Restaura el scroll
     });
   }
@@ -238,7 +252,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const continueShoppingBtn = document.getElementById("continue-shopping");
   if (continueShoppingBtn) {
     continueShoppingBtn.addEventListener("click", () => {
-      document.getElementById("confirmation-modal").classList.remove("active");
+      const confirmationModal = document.getElementById("confirmation-modal");
+      if (confirmationModal) {
+        confirmationModal.classList.remove("active");
+      }
       document.body.style.overflow = ""; // Restaura el scroll
       // El usuario puede continuar navegando en la página
     });

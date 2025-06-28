@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
       updateCartCount();
 
       // Muestra el modal del carrito automáticamente
+      showCartModal();
     });
   });
 
@@ -108,6 +109,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (cart.length === 0) {
       cartItemsContainer.innerHTML =
         '<p class="empty-cart">Your cart is empty</p>';
+      
+      // Actualiza el total a $0.00 cuando el carrito está vacío
+      if (cartTotalElement) {
+        cartTotalElement.textContent = "$0.00";
+      }
       return;
     }
 
@@ -131,7 +137,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Actualiza el total mostrado
-    cartTotalElement.textContent = `$${calculateTotal().toFixed(2)}`;
+    if (cartTotalElement) {
+      cartTotalElement.textContent = `$${calculateTotal().toFixed(2)}`;
+    }
 
     // Agrega event listeners a los botones de eliminar
     const removeButtons = document.querySelectorAll(".cart-item-remove");
@@ -184,6 +192,14 @@ document.addEventListener("DOMContentLoaded", () => {
       updateCartCount();
       renderCartItems();
     }
+  }
+
+  // Función para limpiar completamente el carrito
+  function clearCart() {
+    cart = [];
+    saveCart();
+    updateCartCount();
+    renderCartItems();
   }
 
   // Abre el panel lateral del carrito desde la derecha
@@ -244,6 +260,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const checkoutBtn = document.getElementById("checkout-btn");
   if (checkoutBtn) {
     checkoutBtn.addEventListener("click", () => {
+      if (cart.length === 0) {
+        alert("Your cart is empty. Please add items before checkout.");
+        return;
+      }
       hideCartModal(); // Cierra el carrito
       showCheckoutModal(); // Abre el checkout
     });
@@ -254,6 +274,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (closeCheckoutBtn) {
     closeCheckoutBtn.addEventListener("click", hideCheckoutModal);
   }
+
+  // Función para manejar el éxito del pago (llamada desde payment.js)
+  window.handlePaymentSuccess = function() {
+    clearCart();
+  };
 
   // Actualiza el contador del carrito al cargar la página
   updateCartCount();
